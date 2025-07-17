@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
     font-family: Arial, sans-serif;
     background-color: #f8f5ed;
@@ -133,4 +134,141 @@ h1 {
 
 .add-review-button:hover {
     background-color: #6a482d;
+=======
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f5ed;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+}
+
+.header {
+    background-color: #fff;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid #ddd;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+    vertical-align: middle;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #4a2c2a;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 1.1em;
+    margin-bottom: 40px;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.review-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    padding: 25px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 200px;
+}
+
+.review-card .rating {
+    font-size: 1.4em;
+    color: #f7b731;
+    margin-bottom: 15px;
+}
+
+.review-card .rating .score {
+    font-size: 0.8em;
+    color: #666;
+    margin-left: 5px;
+}
+
+.review-card .review-text {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #555;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+.reviewer-info {
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+}
+
+.reviewer-initials {
+    width: 40px;
+    height: 40px;
+    background-color: #8b5e3c;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.reviewer-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.reviewer-name {
+    font-weight: bold;
+    color: #4a2c2a;
+    font-size: 1.1em;
+}
+
+.verified-customer {
+    font-size: 0.9em;
+    color: #777;
+}
+
+.add-review-button {
+    background-color: #8b5e3c;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.add-review-button:hover {
+    background-color: #6a482d;
+>>>>>>> cda613d8054a0bbd5932fc4a8521092c91771b93
 }

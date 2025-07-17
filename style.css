@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
     font-family: Arial, sans-serif;
     background-color: #f8f5ed;
@@ -107,4 +108,115 @@ body {
 
 .submit-button:hover {
     background-color: #6a482d;
+=======
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f5ed;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    padding-top: 50px;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    text-align: center;
+}
+
+.loading-text {
+    color: #8b5e3c;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.review-form-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: left;
+}
+
+.review-form-card h2 {
+    text-align: center;
+    color: #4a2c2a;
+    margin-bottom: 30px;
+    font-size: 1.8em;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+    color: #555;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-group:first-of-type {
+    display: flex;
+    gap: 20px;
+}
+
+.input-half {
+    flex: 1;
+}
+
+.star-rating {
+    display: flex;
+    gap: 5px;
+    font-size: 2em;
+    cursor: pointer;
+    justify-content: flex-start;
+}
+
+.star {
+    color: #ccc;
+    transition: color 0.2s;
+}
+
+.star.selected {
+    color: #f7b731;
+}
+
+.submit-button {
+    background-color: #8b5e3c;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.submit-button:hover {
+    background-color: #6a482d;
+>>>>>>> cda613d8054a0bbd5932fc4a8521092c91771b93
 }
