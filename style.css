@@ -6,14 +6,14 @@ body {
     align-items: flex-start;
     min-height: 100vh;
     margin: 0;
-    padding-top: 50px;
+    padding: 20px 15px;
     box-sizing: border-box;
 }
 
 .container {
     width: 100%;
     max-width: 600px;
-    padding: 20px;
+    padding: 0;
     text-align: center;
 }
 
@@ -27,32 +27,33 @@ body {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 30px;
+    padding: 25px;
     text-align: left;
 }
 
 .review-form-card h2 {
     text-align: center;
     color: #4a2c2a;
-    margin-bottom: 30px;
-    font-size: 1.8em;
+    margin-bottom: 25px;
+    font-size: 1.6em;
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
 .form-group label {
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     color: #333;
     font-weight: bold;
+    font-size: 0.95em;
 }
 
 .form-group input[type="text"],
 .form-group input[type="email"],
 .form-group textarea {
-    width: calc(100% - 20px);
+    width: 100%;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -63,22 +64,23 @@ body {
 
 .form-group textarea {
     resize: vertical;
-    min-height: 120px;
+    min-height: 100px;
 }
 
 .form-group:first-of-type {
     display: flex;
-    gap: 20px;
+    flex-direction: column;
+    gap: 15px;
 }
 
 .input-half {
-    flex: 1;
+    width: 100%;
 }
 
 .star-rating {
     display: flex;
-    gap: 5px;
-    font-size: 2em;
+    gap: 3px;
+    font-size: 1.8em;
     cursor: pointer;
     justify-content: flex-start;
 }
@@ -95,16 +97,52 @@ body {
 .submit-button {
     background-color: #8b5e3c;
     color: white;
-    padding: 12px 25px;
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    font-size: 1.1em;
+    font-size: 1em;
     cursor: pointer;
     transition: background-color 0.3s ease;
     width: 100%;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .submit-button:hover {
     background-color: #6a482d;
+}
+
+@media (min-width: 768px) {
+    body {
+        padding-top: 50px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .review-form-card {
+        padding: 30px;
+    }
+    .review-form-card h2 {
+        font-size: 1.8em;
+    }
+    .form-group {
+        margin-bottom: 20px;
+    }
+    .form-group label {
+        font-size: 1em;
+    }
+    .form-group textarea {
+        min-height: 120px;
+    }
+    .form-group:first-of-type {
+        flex-direction: row;
+        gap: 20px;
+    }
+    .submit-button {
+        padding: 12px 25px;
+        font-size: 1.1em;
+        margin-top: 20px;
+    }
+    .star-rating {
+        font-size: 2em;
+        gap: 5px;
+    }
 }
