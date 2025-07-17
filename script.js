@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const starRating = document.getElementById('starRating');
     const stars = starRating.querySelectorAll('.star');
     const selectedRatingInput = document.getElementById('selectedRating');
+    const loadingOverlay = document.getElementById('loadingOverlay');
     let currentRating = 0;
 
     const updateStarRating = (rating) => {
@@ -50,6 +51,8 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
+        loadingOverlay.classList.add('active');
+
         const review = {
             id: Date.now(),
             name: name,
@@ -65,8 +68,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         localStorage.setItem('customerReviews', JSON.stringify(reviews));
 
-        alert('Thank you for your review! Redirecting to customer reviews page.');
-
-        window.location.href = 'reviews.html';
+        setTimeout(() => {
+            window.location.href = 'reviews.html';
+        }, 2000);
     });
 });
