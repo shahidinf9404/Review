@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         updateStarRating(currentRating);
     });
 
-    reviewForm.addEventListener('submit', (event) => {
+    reviewForm.addEventListener('submit', async (event) => {
         event.preventDefault();
 
         const name = document.getElementById('name').value;
@@ -53,23 +53,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
         loadingOverlay.classList.add('active');
 
-        const review = {
-            id: Date.now(),
+        const reviewData = {
             name: name,
             email: email,
             rating: rating,
             reviewText: reviewText,
-            initials: name.charAt(0).toUpperCase()
+            initials: name.charAt(0).toUpperCase(),
+            timestamp: window.serverTimestamp()
         };
 
-        let reviews = JSON.parse(localStorage.getItem('customerReviews')) || [];
+        try {
+            await window.addDoc(window.collection(window.db, 'reviews'), reviewData);
 
-        reviews.push(review);
-
-        localStorage.setItem('customerReviews', JSON.stringify(reviews));
-
-        setTimeout(() => {
-            window.location.href = 'reviews.html';
-        }, 2000);
+            setTimeout(() => {
+                window.location.href = 'reviews.html';
+            }, 2000);
+        } catch (error) {
+            alert('An error occurred while submitting review: ' + error.message);
+            console.error('Error submitting review to Firebase:', error);
+            loadingOverlay.classList.remove('active');
+        }
     });
 });

@@ -16,6 +16,36 @@
 
         <button class="back-button" onclick="location.href='reviews.html'">Back to Customer Reviews</button>
     </div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
+        import { getFirestore, collection, addDoc, getDocs, doc, deleteDoc, query, orderBy, serverTimestamp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-analytics.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyCidIzqOF2L-wHFErB3op6CT92gusJRJDA",
+            authDomain: "dailycoffeereviews-8db61.firebaseapp.com",
+            projectId: "dailycoffeereviews-8db61",
+            storageBucket: "dailycoffeereviews-8db61.firebasestorage.app",
+            messagingSenderId: "195828041460",
+            appId: "1:195828041460:web:ea0ff1565555c0652780a1",
+            // measurementId: "G-Q7H8QFB4ST" // Sertakan ini jika Anda menggunakan Analytics
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+        const analytics = getAnalytics(app); // Jika Anda ingin menggunakan Analytics
+
+        window.db = db;
+        window.collection = collection;
+        window.addDoc = addDoc;
+        window.getDocs = getDocs;
+        window.doc = doc;
+        window.deleteDoc = deleteDoc;
+        window.query = query;
+        window.orderBy = orderBy;
+        window.serverTimestamp = serverTimestamp;
+    </script>
     <script src="admin-script.js"></script>
 </body>
 </html>
