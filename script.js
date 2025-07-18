@@ -53,12 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         loadingOverlay.classList.add('active');
 
-<<<<<<< HEAD
         const reviewData = {
-=======
-        const review = {
-            id: Date.now(),
->>>>>>> 81da2bb579e3792bc4545ea87d4a0a0ce7ec747f
             name: name,
             email: email,
             rating: rating,
@@ -70,7 +65,6 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
             await window.addDoc(window.collection(window.db, 'reviews'), reviewData);
 
-<<<<<<< HEAD
             setTimeout(() => {
                 window.location.href = 'reviews.html';
             }, 2000);
@@ -79,14 +73,5 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('Error submitting review to Firebase:', error);
             loadingOverlay.classList.remove('active');
         }
-=======
-        reviews.push(review);
-
-        localStorage.setItem('customerReviews', JSON.stringify(reviews));
-
-        setTimeout(() => {
-            window.location.href = 'reviews.html';
-        }, 2000);
->>>>>>> 81da2bb579e3792bc4545ea87d4a0a0ce7ec747f
     });
 });
